@@ -1,0 +1,131 @@
+/*Layout*/
+
+.blog-container {
+    max-width: 1000px;
+    width: 100%;
+    margin: 30px auto; 
+    padding: 15px 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: 
+        "blogpost blogpost blogpost aside";
+}
+
+.blogpost {
+    grid-area: blogpost; 
+    display: grid; 
+    gap: 15px;
+}
+
+.aside { 
+    grid-area: aside;
+    margin: 10px 5px 0px 20px; 
+} 
+
+
+@media only screen and (max-width: 789px) {
+    .blog-container  {
+        grid-template-columns: 2fr;
+        grid-template-areas: 
+            "blogpost blogpost"
+            "aside aside";
+    }
+}
+
+/*Blogpost elements*/
+
+.blogpost__figure {
+    display: flex;
+    flex-direction: column; 
+    position: relative;
+}
+
+.blogpost__image {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+}
+
+.blogpost__figurecaption {
+    background-color: var(--secondary);
+    opacity: 0.8;
+    padding: 0 10px;
+    font-size: 0.9rem;
+    position: absolute;
+    bottom: 1%;
+}
+
+.blogpost__info-container {
+    display: grid;
+    font-style: italic;
+    grid-template-columns: auto 1fr;
+    gap: 1rem;
+}
+
+.blogpost__author {
+    align-self: center;
+    font-weight: 700;
+}
+
+.avatar {
+    max-width: 40px;
+    border-radius: 50%;
+}
+
+.blogpost__date {
+    grid-column: 1 / span 2;
+}
+
+.social-shares {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0 30px; 
+    padding: 5px; 
+}
+
+.social-shares .icon {
+    margin: 0 10px;
+}
+
+/*Aside elements*/
+
+.aside__item {
+    padding: 20px 10px; 
+    background-color: var(--secondary);
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+}
+
+.aside__recent-posts {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 10px; 
+    background-color: var(--secondary);
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+}
+
+@media only screen and (max-width: 789px) {
+    .aside__recent-posts {
+        flex-flow: row wrap;
+        justify-content: space-around;
+        column-gap: 1rem;
+    }
+
+    .aside .card {
+        flex-basis: 150px;
+        flex-grow: 2;
+    }
+}
+
+.aside__heading {
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.aside .card__heading {
+    font-size: 1rem;
+}

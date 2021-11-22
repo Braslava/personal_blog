@@ -1,0 +1,125 @@
+
+.grid-container {
+    display: grid;
+    gap: 20px; 
+    padding: 15px 0;
+    max-width: 1000px;
+    margin: 0 auto; 
+}
+
+/*Hero card */
+
+.hero {
+    display: grid;
+    grid-template-columns: minmax(auto, 500px) 1fr;
+    border: 1px solid  var(--secondary); 
+    margin: 10px; 
+    background-color: var(--secondary);
+}
+
+.hero__image {
+    object-fit: cover;
+    justify-self: center;
+    width: 100%;
+}
+
+.hero__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 10px 10px 15px 10px;
+    margin-left: 10px;
+}
+
+.hero__content * {
+    padding-bottom: 5px;
+}
+
+.hero__content .btn-wrapper {
+    margin: 8px 8px 0 0;
+    display: flex;
+    justify-content: end;
+}
+
+.post-description {
+    font-style: italic;
+}
+
+.hero__content .preview {
+    font-size: 1.1rem;
+}
+
+.hero__heading {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 120%;
+}
+
+@media only screen and (max-width: 789px) {
+    .hero  {
+        grid-template-columns: 1fr; 
+    } 
+
+    .hero__heading {
+        font-size: 22px;
+    }
+
+    .hero__content {
+        margin-left: 0;
+    }
+  }
+
+/*Layout of recent blog items*/
+
+.blog-items-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-evenly;
+    gap: 30px 15px;
+    padding: 10px; 
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid  var(--secondary); 
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.card__heading {
+    font-size: 20px; 
+    font-weight: 700;
+}
+
+.card__content {
+    display: grid;
+    gap: 15px;
+    padding: 10px;
+}
+
+.card__image {
+    width: 100%;
+    max-width: 500px;
+}
+
+.blogpost-link:hover,
+.blogpost-link:focus {
+    opacity: 0.8;
+}
+
+@media only screen and (max-width: 789px) {
+    .blog-items-container  {
+        grid-template-columns: 1fr 1fr;
+    }
+  }
+
+@media only screen and (max-width: 500px) {
+    .blog-items-container  {
+        grid-template-columns: 1fr;
+    }
+  
+    .card__heading {
+        font-size: 1.1rem;
+    }
+  }
