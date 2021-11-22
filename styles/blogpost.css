@@ -30,6 +30,10 @@
             "blogpost blogpost"
             "aside aside";
     }
+
+    .aside { 
+        margin: 0; 
+    } 
 }
 
 /*Blogpost elements*/
