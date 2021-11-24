@@ -15,7 +15,9 @@
         <nav class="nav-bar">
             <a href="index.html" class="nav-bar__item">Home</a>
             <a href="about.html" class="nav-bar__item">About</a>
-            <button class="subscribe-btn button button--outline">Subscribe</button>
+            <div class="subscribe-btn-wrapper">
+                <button class="button--subscribe button button--outline">Subscribe</button>
+            </div>
         </nav>
         <div class="page-title-wrapper">
             <h1 class="page-title">My personal Blog</h1>
@@ -107,7 +109,14 @@
                     consectetur dolorem dolor. Voluptatem delectus sit odit maiores autem cum.
                 </p>
             </div>
-
+            <h3 class="aside__heading">Subscribe:</h3>
+            <div class="aside__item">
+                <form action="" class="form--subscribe">
+                    <input type="text" placeholder="name" class="form--subscribe__input">
+                    <input type="text" placeholder="email" class="form--subscribe__input">
+                    <button class="button--subscribe button button--outline">Subscribe</button>
+                </form>
+            </div>
             <h3 class="aside__heading">Recent:</h3>
             <div class="aside__recent-posts">
                 <div class="card">

@@ -51,6 +51,10 @@ html, body, h1, h2, h3, blockquote {
     color: var(--white);
 }
 
+.button--subscribe {
+    font-weight: 600;
+}
+
 .icon {
     max-width: 35px;
     width: 100%;
