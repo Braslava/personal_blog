@@ -115,3 +115,8 @@ html, body, h1, h2, h3, blockquote {
 .margin-top-20px {
     margin-top: 20px;
 }
+
+.in-text-link {
+    text-decoration: underline;
+    cursor: pointer;
+}
