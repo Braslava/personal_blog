@@ -6,5 +6,6 @@ Personal blog website with a responsive layout using CSS grid.
 ## Known issues
 Some of the links and buttons do not function because there is only one example blogpost page. 
 
+## Deployment
 See [the page in action here](https://braslava.github.io/personal_blog/)
 
